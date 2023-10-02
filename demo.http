@@ -1,0 +1,112 @@
+POST http://localhost:9090/faculty/facultyPost
+Content-Type: application/json
+
+{
+      "sno":2023000005,
+      "event_name": 1,
+      "event_title": "IoT",
+      "event_organizer": "EEE",
+      "event_sponsor": "IEEE",
+      "event_date": "1899-11-29T18:38:50.000Z",
+      "event_venue": "EE lab",
+      "guest_name": "Ram",
+      "guest_designation": "Developer",
+      "guest_address": "Attur",
+      "guest_number": 9876521230,
+      "guest_email": "ram@gmail.com",
+      "student_count": 50,
+      "faculty_count": 2,
+      "others_count": 0,
+      "event_photo_1": "photo1/path1",
+      "event_photo_2": "photo2/path1",
+      "event_po": "1,2,3,4",
+      "proposal_date": "1899-11-29T18:38:50.000Z",
+      "proposal_hod": "1899-11-29T18:38:50.000Z",
+      "proposal_principal": "1899-11-29T18:38:50.000Z",
+      "completion_date": "1899-11-29T18:38:50.000Z",
+      "completion_hod": "1899-11-29T18:38:50.000Z",
+      "completion_principal": "1899-11-29T18:38:50.000Z",
+      "pdf": "pdf/path",
+      "approval_status": 0,
+      "event_budget": 40000,
+      "event_coordinator": "Mr. Vijay",
+      "coordinator_phno": 1234567890,
+      "coordinator_designation": "0",
+      "event_duration": "9.00 - 4.00",
+      "event_os": "Dr. Kavitha",
+      "event_time": "9.00",
+      "event_description": "About the event",
+      "acdyr_id": 0,
+      "event_budget_utilized": 50000,
+      "dept_id": 0,
+      "sem_id": 0
+    }
+
+GET http://localhost:9090/hod/hodGet
+
+PUT http://localhost:9090/hod/hodApprove
+Content-Type: application/json
+
+{
+  "sno":2023000005,
+  "proposal_hod":"0000-00-00",
+  "approval_status":1
+}
+
+GET http://localhost:9090/principal/principalGet
+
+PUT http://localhost:9090/principal/principalApprove
+Content-Type: application/json
+
+{
+  "sno":2023000005,
+  "proposal_hod":"0000-00-00",
+  "approval_status":2
+}
+
+GET http://localhost:9090/faculty/facultyGet
+
+PUT http://localhost:9090/faculty/facultyUpdate
+Content-Type: application/json
+
+{
+  "sno":2147483647,
+  "event_photo_1":"photo/path1",
+  "event_photo_2":"photo/path2",
+  "event_po":"1,2,3,4",
+  "completion_date":"0000-00-00",
+  "completion_hod":"0000-00-00",
+  "completion_principal":"0000-00-00",
+  "approval_status":3,
+  "event_duration":"10.00 - 4.00",
+  "event_os":"Dr. Kavitha",
+  "event_time":"12.00",
+  "event_description":"About the program",
+  "event_budget_utilized":50000
+}
+
+GET http://localhost:9090/hod/hodGet
+
+PUT http://localhost:9090/hod/hodApprove
+Content-Type: application/json
+
+{
+  "sno":2023000005,
+  "proposal_hod":"0000-00-00",
+  "approval_status":4
+}
+
+GET http://localhost:9090/principal/principalGet
+
+PUT http://localhost:9090/principal/principalApprove
+Content-Type: application/json
+
+{
+  "sno":2023000005,
+  "proposal_hod":"0000-00-00",
+  "approval_status":5
+}
+
+
+
+DELETE http://localhost:9090/facultyDelete/2147483647
